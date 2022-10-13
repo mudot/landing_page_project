@@ -1,0 +1,577 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*FONTES
+menu: font-family: 'Major Mono Display', monospace;
+banner:
+font-family: 'Ultra', serif;
+font-family: 'Raleway', sans-serif;
+
+*/
+
+.material-icons-outlined {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 30px;  /* Preferred icon size */
+    display: flex;
+    cursor: pointer;
+    align-self: center;
+    padding-right: 20px;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+.material-icons-outlined:hover {
+    color:#aca8a8;
+}
+
+header {
+    width: 100vw;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    max-width: calc(100vw - 20px);
+    height: 90px;
+}
+
+nav .logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 90px;
+}
+
+nav .logo img:first-child {
+    max-width: 250px;
+    max-height: auto;
+}
+
+nav ul {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+nav ul a {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 17px;
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #57565a;
+}
+nav ul a:hover {
+    color: #2e2d30;
+}
+
+.nav .menu_icons {
+    height: 90px;
+    position: relative;
+}
+
+.search1 {
+    display: inline-block;
+    position: relative;
+}
+
+
+.mat_items input[type="checkbox"] {
+    position: absolute;
+}
+
+.search {
+    display: none;
+    position:absolute;
+    z-index: 1;
+    height: 90px;
+    top: 65px;
+    
+}
+
+input:not([type="submit"]) {
+    width: 120px;
+}
+
+input {
+    padding: 3px;
+}
+
+input[type="submit"] {
+    font-size: 15px;
+    background-color:#fff;
+    outline-style: none;
+    border: none;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #dbdada;
+}
+
+.menu_icons .mat_items {
+    /* NAO ESQUECER DE AJEITAR DEPOIS */
+    display: flex;
+    height: 90px;
+}
+
+.shade_shop_button {
+    outline-style: none;
+    border: none;
+    background-color: #fff;
+}
+
+.shade_shop_menu {
+    position: relative;
+    display: inline-block;
+}
+
+.shade_shop_items {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px #aca8a8 ;
+    z-index: 1;
+}
+
+.shade_shop_menu:hover .shade_shop_items {
+    display: block;
+}
+
+.optical_shop_button {
+    outline-style: none;
+    border: none;
+    background-color: #fff;
+}
+
+.optical_shop_menu {
+    position: relative;
+    display: inline-block;
+}
+
+.optical_shop_items {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px #aca8a8 ;
+    z-index: 1;
+}
+
+.optical_shop_menu:hover .optical_shop_items {
+    display: block;
+}
+
+#banner {
+    display: flex;
+    justify-content: center;
+    max-width: 100vw;
+    min-height: 815px;
+    background-image: url(../assets/images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+section .container {
+    display: flex;
+    align-items: flex-end;
+    height: auto;
+}
+section .banner_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80vw;
+    margin-bottom: 80px;
+    text-shadow: 2px 2px 8px #171718;
+}
+
+section .banner_text .banner_main_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 990px;
+}
+
+section .banner_text .banner_main_text h1 {
+    font-size: 70px;
+    font-family: 'Ultra', serif;
+    color:aliceblue;
+}
+
+section .banner_text .banner_main_text h2 {
+    margin-top: 50px;
+    font-size: 35px;
+    font-family: 'Raleway', sans-serif;
+    color:aliceblue;
+}
+
+section .banner_button {
+    margin-top: 50px;
+    padding: 25px 55px;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    z-index: 1;
+}
+.banner_button a {
+    text-decoration: none;
+    color:#fff;
+}
+.banner_button a:hover {
+    color:#ebdede;
+    text-shadow: 3px 2px 4px #171718;
+}
+
+.banner_button:before {
+    position: absolute;
+    z-index: -1;
+    opacity: .2;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    content: " ";
+    background-color: #6d6c6e;
+    border-radius: 40px;
+}
+
+.oculos_exposicao {
+    display: flex;
+    justify-content: space-between;
+    min-height: 500px;
+    min-width: 80vw;
+}
+
+#oculos {
+    display:flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+.image1,
+.image2,
+.image3 {
+    flex: 1px;
+    padding: 20px;
+    position: relative;
+    margin: 10px;
+}
+
+.image1 {
+    background-color: transparent;
+    background-image:  linear-gradient( to top, #000, transparent ), url('../assets/images/oculos_fundo1.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.image1:hover {
+    background-image:  linear-gradient( to top, #000, transparent, #000 ), url('../assets/images/oculos_fundo1.jpg');
+}
+
+.image2 {
+    background-color: transparent;
+    background-image:  linear-gradient( to top, #000, transparent ), url('../assets/images/oculos_fundo2.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.image2:hover {
+    background-image:  linear-gradient( to top, #000, transparent, #000 ), url('../assets/images/oculos_fundo2.jpg');
+}
+
+
+.image3 {
+    background-color: transparent;
+    background-image:  linear-gradient( to top, #000, transparent ), url('../assets/images/oculos_fundo3.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.image3:hover {
+    background-image:  linear-gradient( to top, #000, transparent, #000 ), url('../assets/images/oculos_fundo3.jpg');
+}
+
+.image1_content {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.image1_text {
+    color:#fff;
+}
+
+.image1_first_text {
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px #171718;
+}
+
+.image1_first_text_2 h1 {
+    color:#fff;
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+.image1_first_text_2 h2 {
+    color:#fff;
+    font-size: 13px;
+}
+
+.image1_text button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 16px 55px;
+    font-size: 17px;
+    border-radius: 25px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: #636267;
+    border: none;
+    box-shadow: 2px 2px 4px #171718;
+    background-color: #f7ecec;
+}
+
+.image1_text button:hover {
+    background-color: #ebdede;
+}
+
+.image2_text {
+    color:#fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    margin-bottom: 2px;
+    margin-bottom: 20px;
+}
+
+footer {
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-around;
+    width: 33%;
+}
+
+.footer_contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer_contato h4 {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+}
+.footer_contato a {
+    text-decoration: none;
+    color: #3b1f08;
+}
+.footer_contato a:hover {
+    color:#743f10;
+}
+
+.menu-mobile {
+    position: relative;
+    top: -20%;
+    left: -1%;
+    bottom: 2;
+    display: none;
+    padding: 50px;
+}
+.menu-mobile .menu-faketrigger {
+    position: absolute;
+    z-index: 1000;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+}
+
+#options-mobile {
+    position: absolute;
+    display: none;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 997;
+    right: 0;
+    top: 0;
+    background-color: #ebdede;
+    width: 300px;
+    height: calc(100vh - 20px);
+    padding-top: 50px;
+    margin-top: 30px;
+    padding-left: 20px;
+}
+
+.menu-mobile .menu-faketrigger:checked ~ #options-mobile {
+    display: flex;
+}
+
+.menu-mobile .menu-faketrigger:checked ~ .menu-lines span:nth-child(1) {
+    transform-origin: 0% 0%;
+    transform: rotate(45deg) scaleX(1.25);
+}
+.menu-mobile .menu-faketrigger:checked ~ .menu-lines span:nth-child(2) {
+    opacity: 0;
+}
+.menu-mobile .menu-faketrigger:checked ~ .menu-lines span:nth-child(3) {
+    transform-origin: 0% 100%;
+    transform: rotate(-45deg) scaleX(1.25);
+}
+
+.menu-mobile .menu-lines {
+    position: absolute;
+    z-index: 999;
+    width: 35px;
+    height: 35px;
+}
+
+.menu-mobile .menu-lines span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #CDCDCD;
+    border-radius: 3px;
+    transition: all ease .2s;
+}
+
+.menu-mobile ul li {
+    padding: 10px;
+}
+
+.menu-mobile button,
+.menu-mobile .shade_shop_button {
+    background-color: #ebdede;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #57565a;
+}
+
+.menu-mobile .shade_shop_menu {
+    margin-left: 20px;
+}
+
+.menu-mobile .optical_shop_menu {
+    margin-left: 10px;
+}
+
+.menu-mobile .mat_items {
+    display: flex;
+    justify-content: row;
+}
+
+@media (max-width: 1024px) {
+    .footer_content {
+        
+        width: 70%;
+    }
+}
+
+@media (max-width: 775px) {
+    .menu-mobile {
+        display:block;
+    }
+
+    .menu_icons {
+        display: none;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    header nav .logo {
+        justify-content: space-between;
+    }
+
+    #banner .banner_text {
+        max-width: fit-content;
+    }
+
+    section .banner_text .banner_main_text h1 {
+        font-size: 70px;
+        text-align: center;
+    }
+    section .banner_text .banner_main_text h2 {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+
+    .footer_content {
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
+    .footer_contato {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 660px) {
+    .oculos_exposicao {
+        flex-direction: column;
+    }
+    #oculos {
+        min-height: 1000px;
+    }
+    
+    section .banner_text .banner_main_text h1 {
+        font-size: 50px;
+    }
+    section .banner_text .banner_main_text h2 {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    section .banner_button {
+        margin-top: 50px;
+        padding: 20px 50px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 528px) {
+    .footer_content {
+        width: 70%;
+    }
+    
+}
